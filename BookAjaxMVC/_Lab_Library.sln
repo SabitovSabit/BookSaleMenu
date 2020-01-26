@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_Lab_Library", "_Lab_Library\_Lab_Library.csproj", "{355AB9DC-27F0-4828-B768-44DA6E8B2000}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabWebAPI_17_1_2020", "LabWebAPI_17_1_2020\LabWebAPI_17_1_2020.csproj", "{A1062D0C-D528-4608-BC51-0FCCE4EADF5B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{355AB9DC-27F0-4828-B768-44DA6E8B2000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{355AB9DC-27F0-4828-B768-44DA6E8B2000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{355AB9DC-27F0-4828-B768-44DA6E8B2000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{355AB9DC-27F0-4828-B768-44DA6E8B2000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1062D0C-D528-4608-BC51-0FCCE4EADF5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1062D0C-D528-4608-BC51-0FCCE4EADF5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1062D0C-D528-4608-BC51-0FCCE4EADF5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1062D0C-D528-4608-BC51-0FCCE4EADF5B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E9153878-9A14-4555-AA1F-112546CFF1A4}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form method="post">
+                <div class="form-group">
+
+                    <select class="form-control" id="author">
+                        <option disabled selected>Choose Author</option>
+                    </select>
+                </div>
+                <div class="form-group">
+
+                    <select class="form-control" id="book">
+                        <option disabled selected>Choose Book</option>
+                    </select>
+                </div>
+                <div class="form-group">
+
+                    <select class="form-control" id="lang"></select>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script>
+        $(document).ready(() => {
+            $.ajax({
+                url: "/Home/GetAllAuthors",
+                type: "Get",
+                success: (respons) => {
+                    console.log(respons);
+                    //  var res = JSON.parse(respons);
+                    for (let a of respons) {
+                        $("#author").append(`<option value=${a.id}>${a.name}</option>`)
+                    }
+                }
+            })
+
+            $("#author").change(function () {
+                let selectedId = $(this).val();
+                $("#book").empty();
+                $("#lang").empty();
+                $.ajax({
+                    url: "/Home/GetBooksByAuthorId",
+                    type: "POST",
+                    data: {
+                        id: selectedId
+                    },
+                    success: (respons) => {
+                        $("#book").append(`<option disabled selected>Choose Book</option>`)
+                        for (let a of respons) {
+                            $("#book").append(`<option value=${a.id}>${a.name}</option>`)
+                        }
+                    },
+                    error: (res) => {
+                        console.error(res)
+                    }
+                })
+            })
+
+
+            $("#book").change(function () {
+                 $("#lang").empty();
+                let selId = $(this).val();
+                $.ajax({
+                    url: "/Home/GetLangByBookId",
+                    type: "POST",
+                    data: { bookId: selId },
+                    success: (response) => {
+                        console.log(response);
+                        for (let f of response) {
+                            $("#lang").append(`<option>${f.name}</option>`)
+                        }
+                    }
+                })
+            })
+        })
+    </script>
+
+}
